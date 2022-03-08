@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600;700&display=swap');
+:root {
+    --white: #FFFFFF;
+    --dark-teal: #0C7C86;
+    --light-teal: #12C0CF;
+    --green: #93E437;
+    --green-hover: #71BB1D;
+    --main-padding: 20px 15px;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+}
+
+#description {
+    grid-area: description;
+}
+
+#price-description {
+    grid-area: price-description;
+}
+
+#about-us {
+    grid-area: about-us;
+}
+
+@media screen and (max-width: 400px) {
+    #container {
+        display: grid;
+        grid-template-areas: 
+        "description"
+        "price-description" 
+        "about-us";
+    }
+}
+
+@media screen and (min-width: 401px) {
+    #container {
+        display: grid;
+        grid-template-areas: 
+        "description description"
+        "price-description about-us";
+    }
+}
