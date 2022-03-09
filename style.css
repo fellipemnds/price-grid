@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap');
 :root {
     --light-gray: #DDDDDD;
-    --dark-gray: #BBBBBB;
+    --black: rgba(0, 0, 0, 0.2);
     --white: #FFFFFF;
     --dark-teal: #0C7C86;
     --light-teal: #12C0CF;
@@ -12,7 +12,8 @@
 body, html {
     font-family: 'Poppins', sans-serif;
     font-size: 1rem;
-    background-color: var(--light-gray);
+    background-image: url("background.jpg");
+    width: 100%;
 }
 
 #container {
@@ -45,13 +46,13 @@ body, html {
 
 @media screen and (max-width: 415px) {
     #container {
-        margin: 2rem 1rem;
+        margin: 2rem 2rem;
         display: grid;
         grid-template-areas: 
         "description"
         "price-description"
         "about-us";
-        filter: drop-shadow(0 0.5rem 0.5rem var(--dark-gray));
+        box-shadow: 0 0.5rem 1rem var(--black);
     }
 
     #description {
@@ -124,7 +125,7 @@ body, html {
         text-decoration: none;
         font-weight: 600;
         border-radius: 0.3rem;
-        filter: drop-shadow(0 0.8rem 1rem var(--black));
+        box-shadow: 0 0.5rem 1rem var(--black);
     }
 
     #about-us {
@@ -143,7 +144,7 @@ body, html {
             "price-description about-us";
         width: 50rem;
         border-radius: 0.5rem;
-        filter: drop-shadow(0 0.5rem 0.5rem var(--dark-gray));
+        box-shadow: 0 0.5rem 1rem var(--black);
         margin: auto;
         position: absolute;
         top: 50%;
@@ -216,7 +217,7 @@ body, html {
         text-decoration: none;
         font-weight: 600;
         border-radius: 0.3rem;
-        filter: drop-shadow(0 1rem 0.1rem var(--black));
+        box-shadow: 0 0.5rem 1rem var(--black);
     }
 
     #button:hover {
@@ -228,7 +229,7 @@ body, html {
         text-decoration: none;
         font-weight: 600;
         border-radius: 0.3rem;
-        filter: drop-shadow(0 1rem 0.1rem var(--black));
+        box-shadow: 0 0.5rem 1rem var(--black);
     }
 
     #about-us {
