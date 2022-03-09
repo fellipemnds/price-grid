@@ -1,46 +1,243 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap');
 :root {
+    --light-gray: #DDDDDD;
+    --dark-gray: #BBBBBB;
     --white: #FFFFFF;
     --dark-teal: #0C7C86;
     --light-teal: #12C0CF;
     --green: #93E437;
     --green-hover: #71BB1D;
-    --main-padding: 20px 15px;
 }
 
 body, html {
-    height: 100%;
     font-family: 'Poppins', sans-serif;
     font-size: 1rem;
+    background-color: var(--light-gray);
+}
+
+#container {
+    border-radius: 0.5rem;
 }
 
 #description {
     grid-area: description;
+    background-color: var(--white);
+}
+
+#description h1 {
+    color: var(--dark-teal);
+}
+
+#description h2 {
+    color: var(--green-hover);
 }
 
 #price-description {
     grid-area: price-description;
+    background-color: var(--dark-teal);
+    color: white;
 }
 
 #about-us {
     grid-area: about-us;
+    background-color: var(--light-teal);
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 415px) {
     #container {
+        margin: 2rem 1rem;
         display: grid;
         grid-template-areas: 
         "description"
-        "price-description" 
+        "price-description"
         "about-us";
+        filter: drop-shadow(0 0.5rem 0.5rem var(--dark-gray));
+    }
+
+    #description {
+        padding: 1.5rem 2rem;
+        display: flex;
+        border-top-left-radius: 0.5rem;
+        border-top-right-radius: 0.5rem;
+        flex-direction: column;
+    }
+
+    #description h1 {
+        text-align: center;
+        margin: 0rem;
+        font-size: 2.4rem;
+    }
+    
+    #description h2 {
+        text-align: center;
+        margin: 0.5rem;
+        font-size: 1.2rem;
+    }
+    
+    #description p {
+        text-align: justify;
+        margin-bottom: 0.5rem;
+    }
+    
+    #price-description {
+        padding: 1rem 2rem 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #price-description h3 {
+        text-align: center;
+        margin: 0;
+        padding: 1rem 0 0.5rem;
+        font-size: 1.4rem;
+    }
+    
+    #price {
+        margin: 0;
+        padding: 0.8rem 0 0.3rem;
+        font-weight: 200;
+        display: inline-flex;
+        align-items: center;
+    }
+
+    #number {
+        align-items: center;
+        padding-right: 0.5rem;
+        font-size: 3rem;
+        font-weight: 700;
+        line-height: 3rem;
+    }
+
+    #details {
+        font-size: 0.9rem;
+        text-align: justify;
+        font-weight: 300;
+    }
+
+    #button {
+        background-color: var(--green);
+        width: 100%;
+        text-align: center;
+        padding: 0.75rem 0;
+        color: var(--white);
+        text-decoration: none;
+        font-weight: 600;
+        border-radius: 0.3rem;
+        filter: drop-shadow(0 0.8rem 1rem var(--black));
+    }
+
+    #about-us {
+        border-bottom-left-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+        padding: 0.5rem 2rem;
+        color: var(--white);
     }
 }
 
-@media screen and (min-width: 401px) {
+@media screen and (min-width: 416px) {
     #container {
         display: grid;
-        grid-template-areas: 
-        "description description"
-        "price-description about-us";
+        grid-template-areas:
+            "description description"
+            "price-description about-us";
+        width: 50rem;
+        border-radius: 0.5rem;
+        filter: drop-shadow(0 0.5rem 0.5rem var(--dark-gray));
+        margin: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translateY(-50%) translateX(-50%);
+        transform: translateY(-50%) translateX(-50%);
+    }
+
+    #description {
+        padding: 1.5rem 3rem;
+        border-top-left-radius: 0.5rem;
+        border-top-right-radius: 0.5rem;
+    }
+
+    #description h1 {
+        font-size: 2rem;
+        line-height: 2rem;
+        padding-bottom: 1rem;
+    }
+
+    #description h2 {
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+    }
+
+    #price-description {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding: 1.5rem 3rem;
+        border-bottom-left-radius: 0.5rem;
+    }
+
+    #price-description h3 {
+        margin: 0;
+        font-size: 1.4rem;
+        font-weight: 400;
+    }
+    
+    #price {
+        margin: 0;
+        margin-top: 1rem;
+        font-weight: 200;
+        display: inline-flex;
+        align-items: center;
+    }
+
+    #number {
+        align-items: center;
+        padding-right: 0.5rem;
+        font-size: 3rem;
+        font-weight: 700;
+        line-height: 3rem;
+    }
+
+    #details {
+        margin-bottom: 1rem;
+        margin-top: -0.2rem;
+        text-align: justify;
+        font-size: 1rem;
+        font-weight: 300;
+    }
+
+    #button {
+        background-color: var(--green);
+        width: 100%;
+        text-align: center;
+        padding: 0.75rem 0;
+        color: var(--white);
+        text-decoration: none;
+        font-weight: 600;
+        border-radius: 0.3rem;
+        filter: drop-shadow(0 1rem 0.1rem var(--black));
+    }
+
+    #button:hover {
+        background-color: var(--green-hover);
+        width: 100%;
+        text-align: center;
+        padding: 0.75rem 0;
+        color: var(--white);
+        text-decoration: none;
+        font-weight: 600;
+        border-radius: 0.3rem;
+        filter: drop-shadow(0 1rem 0.1rem var(--black));
+    }
+
+    #about-us {
+        color: var(--white);
+        padding: 1.5rem 3rem;
+        border-bottom-right-radius: 0.5rem;
+    }
+    
+    #about-us h3 {
+        font-weight: 600;
     }
 }
