@@ -1,19 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;600;700&display=swap');
 :root {
-    --light-gray: #DDDDDD;
-    --black: rgba(0, 0, 0, 0.2);
-    --white: #FFFFFF;
-    --dark-teal: #0C7C86;
-    --light-teal: #12C0CF;
-    --green: #93E437;
-    --green-hover: #71BB1D;
+    --greyish-blue: hsl(218, 22%, 67%);
+    --light-gray: hsl(204, 43%, 93%);
+    --black: hsla(0, 0%, 0%, 0.2);
+    --white: hsl(0, 0%, 100%);
+    --cyan: hsl(179, 62%, 43%);
+    --light-cyan: hsl(179, 47%, 52%);
+    --green: hsl(71, 73%, 54%);
+    --green-hover: hsl(71, 72%, 45%);
 }
 
 body, html {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1rem;
-    background-image: url("background.jpg");
-    width: 100%;
+    font-family: 'Karla', sans-serif;
+    font-size: 16px;
+    background-color: var(--light-gray);
 }
 
 #container {
@@ -21,12 +21,13 @@ body, html {
 }
 
 #description {
+    color: var(--greyish-blue);
     grid-area: description;
     background-color: var(--white);
 }
 
 #description h1 {
-    color: var(--dark-teal);
+    color: var(--cyan);
 }
 
 #description h2 {
@@ -35,18 +36,19 @@ body, html {
 
 #price-description {
     grid-area: price-description;
-    background-color: var(--dark-teal);
+    background-color: var(--cyan);
     color: white;
 }
 
 #about-us {
     grid-area: about-us;
-    background-color: var(--light-teal);
+    background-color: var(--light-cyan);
 }
 
-@media screen and (max-width: 415px) {
+/* Viewport for cellphones */
+@media screen and (max-width: 480px) {
     #container {
-        margin: 2rem 2rem;
+        margin: 2rem;
         display: grid;
         grid-template-areas: 
         "description"
@@ -64,19 +66,19 @@ body, html {
     }
 
     #description h1 {
-        text-align: center;
         margin: 0rem;
-        font-size: 2.4rem;
+        font-size: 1.5rem;
     }
     
     #description h2 {
-        text-align: center;
-        margin: 0.5rem;
-        font-size: 1.2rem;
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
+        font-size: 1.3rem;
     }
     
     #description p {
         text-align: justify;
+        line-height: 1.75rem;
         margin-bottom: 0.5rem;
     }
     
@@ -111,6 +113,8 @@ body, html {
     }
 
     #details {
+        margin-top: 0;
+        margin-bottom: 1.75rem;
         font-size: 0.9rem;
         text-align: justify;
         font-weight: 300;
@@ -120,7 +124,7 @@ body, html {
         background-color: var(--green);
         width: 100%;
         text-align: center;
-        padding: 0.75rem 0;
+        padding: 1rem 0;
         color: var(--white);
         text-decoration: none;
         font-weight: 600;
@@ -131,12 +135,14 @@ body, html {
     #about-us {
         border-bottom-left-radius: 0.5rem;
         border-bottom-right-radius: 0.5rem;
+        font-weight: 200;
+        line-height: 1.5rem;
         padding: 0.5rem 2rem;
         color: var(--white);
     }
 }
 
-@media screen and (min-width: 416px) {
+@media screen and (min-width: 481px) {
     #container {
         display: grid;
         grid-template-areas:
@@ -146,11 +152,6 @@ body, html {
         border-radius: 0.5rem;
         box-shadow: 0 0.5rem 1rem var(--black);
         margin: auto;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        -ms-transform: translateY(-50%) translateX(-50%);
-        transform: translateY(-50%) translateX(-50%);
     }
 
     #description {
@@ -162,7 +163,7 @@ body, html {
     #description h1 {
         font-size: 2rem;
         line-height: 2rem;
-        padding-bottom: 1rem;
+        padding-bottom: 0.2rem;
     }
 
     #description h2 {
@@ -175,6 +176,7 @@ body, html {
         flex-direction: column;
         justify-content: space-evenly;
         padding: 1.5rem 3rem;
+        /* margin: 2rem; */
         border-bottom-left-radius: 0.5rem;
     }
 
@@ -186,7 +188,7 @@ body, html {
     
     #price {
         margin: 0;
-        margin-top: 1rem;
+        margin-top: 0.5rem;
         font-weight: 200;
         display: inline-flex;
         align-items: center;
