@@ -17,7 +17,6 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
 }
 
 main {
@@ -50,7 +49,7 @@ main {
 }
 
 /* Viewport for cellphones */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 724px) {
     main {
         display: grid;
         grid-template-areas: 
@@ -145,13 +144,17 @@ main {
     }
 }
 
-@media screen and (min-width: 481px) {
+@media screen and (min-width: 725px) {
+    body {
+        height: 100vh;
+    }
+
     main {
         display: grid;
         grid-template-areas:
             "description description"
             "price-description about-us";
-        width: 50rem;
+        width: 45rem;
         border-radius: 0.5rem;
         box-shadow: 0 0.5rem 1rem var(--black);
     }
