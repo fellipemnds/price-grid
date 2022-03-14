@@ -14,9 +14,13 @@ body, html {
     font-family: 'Karla', sans-serif;
     font-size: 16px;
     background-color: var(--light-gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-#container {
+main {
     border-radius: 0.5rem;
 }
 
@@ -47,8 +51,7 @@ body, html {
 
 /* Viewport for cellphones */
 @media screen and (max-width: 480px) {
-    #container {
-        margin: 2rem;
+    main {
         display: grid;
         grid-template-areas: 
         "description"
@@ -143,7 +146,7 @@ body, html {
 }
 
 @media screen and (min-width: 481px) {
-    #container {
+    main {
         display: grid;
         grid-template-areas:
             "description description"
@@ -151,7 +154,6 @@ body, html {
         width: 50rem;
         border-radius: 0.5rem;
         box-shadow: 0 0.5rem 1rem var(--black);
-        margin: auto;
     }
 
     #description {
@@ -196,15 +198,14 @@ body, html {
 
     #number {
         align-items: center;
-        padding-right: 0.5rem;
+        padding: 0 0.5rem;
         font-size: 3rem;
         font-weight: 700;
         line-height: 3rem;
     }
 
     #details {
-        margin-bottom: 1rem;
-        margin-top: -0.2rem;
+        margin: -0.2rem 0 1rem;
         text-align: justify;
         font-size: 1rem;
         font-weight: 300;
